@@ -9,4 +9,6 @@ def summarize_contents(filename):
   records = list(SeqIO.parse("filename", "genbank"))
   len(records) print(records[1].id)
   location = SeqFeature.location(filename , "genbank")
-  print ("location" , SeqFeature.location)
+  print ("Location: " , SeqFeature.location)
+  records = list(SeqIO.parse(filename, "genbank"))
+  len(records) print("Records id: ", records[2].id)
