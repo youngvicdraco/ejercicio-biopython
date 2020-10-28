@@ -1,14 +1,23 @@
-from Bio import SeqIO
-from Bio.SeqFeature import FeatureLocation, SeqFeature
-from Bio.SeqRecord import SeqRecord
-import os.path
-def summarize_contents(filename):
-  record = SeqIO.read(filemame, "genbank")
-  print("Name: ", record.name)
-  print("Path: ", os.path.dirname(filename))
-  record = list(SeqIO.parse(filename , "genbank"))
-  print("Num_records: " % len(records))
-  for seq_record in SeqIO.parse(filename, "genbank"):
-    print("ID :",record.id)
-    print("Name: ",record.name)
-    print("Description: ", record.description)
+import us
+import script
+import unittest
+class miPrueba(Unittest.testCase)
+  
+  def test_summarize_contents(self)
+  s = script.summarize_contents(os.path.abspath("data/AF323668.gbk"))
+  self.assertDictEqual({""})
+  
+  s = script.summarize_contents(os.path.abspath("data/ls_orchid.fasta"))
+  self.assertDictEqual({""})
+  
+  s = script.summarize_contents(os.path.abspath("data/ls_orchid.gbk"))
+  self.assertDictEqual({""})
+  
+  s = script.summarize_contents(os.path.abspath("data/m_cold.fasta"))
+  self.assertDictEqual({""})
+                                                
+  s = script.summarize_contents(os.path.abspath("data/NC_002709.gbk"))
+  self.assertDictEqual({""})
+  
+  s = script.sumarize_contents(os.path.abspath("data/opuntia.fasta"))
+  self.assertDictEqual({""})
